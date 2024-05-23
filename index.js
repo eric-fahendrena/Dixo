@@ -3,6 +3,8 @@ const fs = require('fs');
 const path = require('path');
 
 function getData(res) {
+	console.log('getting data...');
+
 	// object where to stock the words datas
 	let wordsDatas = {
 		en: [],
@@ -18,6 +20,8 @@ function getData(res) {
 			if (lang === 'fr') filePath = `./raw/b${i}.txt`;
 			
 			fs.readFile(filePath, function(err, data){
+				console.log(`reading ${filePath}`);
+				
 				// is there any error?
 				if (err) {
 					return;
