@@ -16,8 +16,8 @@ function getData(res) {
 			let filePath;
 			let fileContent = '';
 
-			if (lang === 'en') filePath = path.join(__dirname, 'raw', `a${i}.txt`);
-			if (lang === 'fr') filePath = path.join(__dirname, 'raw', `b${i}.txt`);
+			if (lang === 'en') filePath = path.join(__dirname, 'db', `a${i}.txt`);
+			if (lang === 'fr') filePath = path.join(__dirname, 'db', `b${i}.txt`);
 			
 			fs.readFile(filePath, function(err, data){
 				console.log(`reading ${filePath}`);
