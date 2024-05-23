@@ -1,10 +1,13 @@
 {
   "name": "dixo",
   "version": "1.0.0",
-  "description": "",
+  "description": "English-French dictionary made with node.js",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {}
 }
