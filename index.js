@@ -84,7 +84,7 @@ const app = express();
 app.use(express.static('public'));
 
 app.get('/', (req, res) => {
-  res.send('Page d\'accueil');
+  res.sendFile('index.html');
 });
 
 app.get('/api/data', (req, res) => {
