@@ -6,7 +6,5 @@
   "scripts": {
     "start": "node index.js"
   },
-  "dependencies": {
-    // vos dépendances ici
-  }
+  "dependencies": {}
 }
