@@ -21,9 +21,10 @@ function getData(res) {
 			
 			fs.readFile(filePath, function(err, data){
 				console.log(`reading ${filePath}`);
-				
+
 				// is there any error?
 				if (err) {
+					console.log(`Cannot read ${filePath}, ${err}`);
 					return;
 				}
 
