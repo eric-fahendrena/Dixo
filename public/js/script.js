@@ -185,7 +185,6 @@ $(document).ready(function(){
     fetch('/api/data')
     .then(response => response.json())
     .then(data => {
-        console.log(data);
         $('#search').get()[0].focus();
 
         showList(data, $('#lang').val());
