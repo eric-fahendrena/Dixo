@@ -1,6 +1,7 @@
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
+const compression = require('compression');
 
 function getData(res) {
 	console.log('getting data...');
@@ -91,6 +92,7 @@ function getData(res) {
 
 const app = express();
 
+app.use(compression());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => {
