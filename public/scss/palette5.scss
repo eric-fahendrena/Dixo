@@ -1,8 +1,9 @@
-$body-bg: #f8f9fa;
-$body-color: #212529;
-$primary: #6733FF;
-$secondary: #FF394F;
-$dark: #120824;
-$light: #EDFBFF;
+$body-bg: #000000;
+$body-color: #FFFFFF;
+$primary: #BDDB0B;
+$secondary: #E6BC43;
+$dark: #111111;
+$light: #DFF6FF;
 
 @import "../../../node_modules/bootstrap/scss/bootstrap";
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");

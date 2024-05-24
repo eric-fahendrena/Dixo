@@ -129,13 +129,13 @@ function handleWordOnClickEvents(item, dict) {
 
         $(header).addClass('d-flex align-items-center justify-content-between p-4 shadow mb-1');
         $(word).addClass('h3');
-        $(xBtn).addClass('btn btn-outline-dark');
+        $(xBtn).addClass('btn btn-outline-light');
 
         $(sensesCont).addClass('h-75 overflow-y-scroll');
         $(senses).addClass('list-unstyled');
 
         $(word).html(`${dict.word} ${dict.ipa1} ${dict.ipa2}`);
-        $(xBtn).html('Exit');
+        $(xBtn).html('<i class="bi-x"></i>');
 
         $(header).append(word);
         $(header).append(xBtn);
@@ -144,7 +144,7 @@ function handleWordOnClickEvents(item, dict) {
             const sensesItem = document.createElement('li');
             
             $(sensesItem).addClass('item');
-            $(sensesItem).html(`<div class="px-4 py-3 fs-5 border">${dict.senses[i]}</div>`);
+            $(sensesItem).html(`<div class="px-4 py-3 fs-5">${dict.senses[i]}</div>`);
 
             // senses item on click events
             $(sensesItem).on('click', e => {
