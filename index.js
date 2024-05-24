@@ -24,7 +24,7 @@ function getData(res) {
 
 				// is there any error?
 				if (err) {
-					console.error(`Cannot read ${filePath}, ${err}`);
+					console.log(`Cannot read ${filePath}, ${err}`);
 					return;
 				}
 
