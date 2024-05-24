@@ -19,7 +19,7 @@ function getData(res) {
 			if (lang === 'en') filePath = path.join(__dirname, 'db', `a${i}.txt`);
 			if (lang === 'fr') filePath = path.join(__dirname, 'db', `b${i}.txt`);
 			
-			if (fs.existsSync(filePath)) {
+			if (!fs.existsSync(filePath)) {
 				continue;
 			}
 
