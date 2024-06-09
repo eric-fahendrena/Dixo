@@ -1,3 +1,7 @@
+/**
+ * Copyright 2024, Eric Fahendrena
+ */
+
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
@@ -97,6 +101,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+app.get('/about', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'about.html'));
 });
 
 app.get('/api/data', (req, res) => {

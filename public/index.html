@@ -1,9 +1,14 @@
+<!-- Copyright 2024, Eric Fahendrena -->
+
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Dixo5 : Dictionnaire Anglais - Français</title>
+	<meta name="title" content="Dixo 5 - Dictionnaire Anglais-Français en ligne">
+	<meta name="description" content="Dixo 5 (ou Dixo Five) est un dictionnaire Anglais-Français facile à utiliser en ligne.">
+	<meta name="keywords" content="dixo 5, dixo five, dictionnaire facile à utiliser, dictionnaire anglais français">
+	<title>Dixo 5 : Dictionnaire Anglais - Français</title>
 	<link rel="stylesheet" href="css/output.css" type="text/css">
 	<style>
 		html, body {
@@ -50,35 +55,46 @@
 			overflow-y: hidden;
 		}
 
-		#sensesList .item:hover {
+		#sensesList .item:hover, .hovered {
 			background-color: var(--bs-primary);
 			color: var(--bs-dark);
 		}
+
+		@media (max-width: 767px) {
+			.word-item {
+				padding: 4pt;
+			}
+		}
+
 	</style>
 </head>
 <body>
-	<header class="sticky-top shadow">
-		<nav class="navbar navbar-dark bg-dark">
-			<div class="container align-items-scretch">
-				<a href="" class="navbar-brand"><span class="h1">Dixo<span class="text-primary">5</span></span></a>
-			</div>
+	<header class="sticky-top">
+		<nav class="navbar navbar-expand-md navbar-dark bg-dark shadow">
 			<div class="container">
-				<div class="w-50">
-					<div class="row align-items-center">
-						<div class="col-10">
-							<div>
-								<input type="search" id="search" class="form-control" placeholder="Rechercher un mot">
-							</div>
+				<a href="" class="navbar-brand"><span class="h1">Dixo<span class="text-primary">5</span></span></a>
+				<ul class="navbar-nav">
+					<li class="nav-item"><a href="/" class="nav-link active">Accueil</a></li>
+					<li class="nav-item"><a href="/about" class="nav-link">À propos</a></li>
+				</ul>
+			</div>
+		</nav>
+		<div class="container">
+			<div class="pt-2">
+				<div class="row align-items-center">
+					<div class="col-10 col-md-11">
+						<div>
+							<input type="search" id="search" class="form-control" placeholder="Rechercher un mot">
 						</div>
-						<div class="col-2">
-							<div>
-								<button id="langToggler" class="btn"><img src="images/flag2.png" alt="Drapeau Français"></button>
-							</div>
+					</div>
+					<div class="col-2 col-md-1">
+						<div>
+							<button id="langToggler" class="btn"><img src="images/flag2.png" alt="Drapeau Français"></button>
 						</div>
 					</div>
 				</div>
 			</div>
-		</nav>
+		</div>
 	</header>
 
 	<section class="py-5">

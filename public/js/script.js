@@ -1,4 +1,8 @@
 /**
+ * Copyright 2024, Eric Fahendrena
+ */
+
+/**
  * lang
  * @var {String}
  */
@@ -59,7 +63,7 @@ function showList(data) {
             $(listItem).html(`
                 <div class="container">
                     <h5>${dict.word} ${dict.ipa1} ${dict.ipa2}</h5>
-                    <p class="senses mx-3 fs-5">${dict.senses.join(', ')}</p>
+                    <p class="senses mx-1 mx-md-3 fs-5">${dict.senses.join(', ')}</p>
                 </div>
             `);
 
@@ -152,6 +156,10 @@ function handleWordOnClickEvents(item, dict) {
                 $('#search').val(dict.senses[i]);
                 $('#search').focus();
                 xBtn.click();
+            });
+
+            $(sensesItem).on('touch', e => {
+                $(this).addClass('hovered');
             });
 
             $(senses).append(sensesItem);
