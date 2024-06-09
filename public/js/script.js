@@ -186,6 +186,18 @@ function handleWordOnClickEvents(item, dict) {
     });
 }
 
+function escapeHTML(unsafe) {
+    return unsafe.replace(/[&<"']/g, function (m) {
+        return {
+            '&': '&amp;',
+            '<': '&lt;',
+            '>': '&gt;',
+            '"': '&quot;',
+            "'": '&#039;'
+        }[m];
+    });
+}
+
 /**
  * when document is ready
  */

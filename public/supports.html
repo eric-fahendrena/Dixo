@@ -42,7 +42,7 @@
 				    <p class="mb-4 lead">
 				    	Je travaille dur pour maintenir et améliorer cette application afin de vous offrir le meilleur service possible. Si vous trouvez cette application utile, vous pouvez me soutenir en faisant un don. Votre contribution m'aidera à couvrir les coûts de développement et à ajouter de nouvelles fonctionnalités.
 				    </p>
-				    <a href="/ko-fi" target="__blank" class="btn btn-primary">Soutenez-moi sur Ko-fi</a>
+				    <a href="/ko-fi" target="__blank" class="btn btn-primary" onclick="trackButtonClick('Button Clicks', 'Support on Ko-fi')">Soutenez-moi sur Ko-fi</a>
 				</div>
 			</div>
 		</div>
@@ -71,7 +71,7 @@
 		    				<label for="message" class="form-label">Message :</label>
 		    				<textarea name="Message" id="message" class="form-control" rows="5" placeholder="Veuillez entrer votre message"></textarea>
 		    			</div>
-		    			<button type="submit" class="btn btn-primary">Envoyer</button>
+		    			<button type="submit" class="btn btn-primary" onclick="trackButtonClick('Buttons Clicks', 'Submit Feedback')">Envoyer</button>
 		    		</form>
     			</div>
     		</div>
@@ -87,11 +87,18 @@
 	<!-- Google tag (gtag.js) -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-VHSMLGTT12"></script>
 	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
+	  	window.dataLayer = window.dataLayer || [];
+	  	function gtag(){dataLayer.push(arguments);}
+	  	gtag('js', new Date());
 
-	  gtag('config', 'G-VHSMLGTT12');
+	  	gtag('config', 'G-VHSMLGTT12');
+
+	  	function trackButtonClick(category, label) {
+		  	gtag('event', 'click', {
+		    	'event_category': category,
+		    	'event_label': label
+		  	});
+		}
 	</script>
 </body>
 </html>
