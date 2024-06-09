@@ -105,6 +105,12 @@ app.get('/', (req, res) => {
 app.get('/about', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'about.html'));
 });
+app.get('/support', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'supports.html'));
+});
+app.get('/ko-fi', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'ko-fi.html'));
+});
 
 app.get('/api/data', (req, res) => {
 	getData(res);
