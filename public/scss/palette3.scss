@@ -5,4 +5,59 @@ $secondary: #C6F100;
 $dark: #121619;
 $light: #EDFBFF;
 
+html, body {
+	margin: 0;
+}
+
+#langToggler {
+	width: 32pt;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#langToggler img {
+	width: 250%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.word-item {
+	padding: 8pt;
+}
+.word-item:hover {
+	background-color: var(--bs-dark);
+	color: var(--bs-light);
+}
+
+#sensesListContainer {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #0002;
+}
+
+#sensesList {
+	position: fixed;
+	top: 30%;
+	left: 5%;
+	right: 5%;
+	bottom: 5%;
+	background-color: var(--bs-dark);
+	color: var(--bs-light);
+	overflow-y: hidden;
+}
+
+#sensesList .item:hover, .hovered {
+	background-color: var(--bs-primary);
+	color: var(--bs-dark);
+}
+
+@media (max-width: 767px) {
+	.word-item {
+		padding: 4pt;
+	}
+}
+
 @import "../../../node_modules/bootstrap/scss/bootstrap";

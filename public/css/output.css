@@ -1,10 +1,66 @@
 @charset "UTF-8";
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+html, body {
+  margin: 0;
+}
+
+#langToggler {
+  width: 32pt;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#langToggler img {
+  width: 250%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.word-item {
+  padding: 8pt;
+}
+
+.word-item:hover {
+  background-color: var(--bs-dark);
+  color: var(--bs-light);
+}
+
+#sensesListContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.1333333333);
+}
+
+#sensesList {
+  position: fixed;
+  top: 30%;
+  left: 5%;
+  right: 5%;
+  bottom: 5%;
+  background-color: var(--bs-dark);
+  color: var(--bs-light);
+  overflow-y: hidden;
+}
+
+#sensesList .item:hover, .hovered {
+  background-color: var(--bs-primary);
+  color: var(--bs-dark);
+}
+
+@media (max-width: 767px) {
+  .word-item {
+    padding: 4pt;
+  }
+}
 /*!
  * Bootstrap  v5.3.3 (https://getbootstrap.com/)
  * Copyright 2011-2024 The Bootstrap Authors
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 :root,
 [data-bs-theme=light] {
   --bs-blue: #0d6efd;

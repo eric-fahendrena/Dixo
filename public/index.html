@@ -4,6 +4,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<meta http-equiv="Content-Security-Policy" content="default-src 'self'">
 	<meta name="Content-Security-Policy" value="default-src 'self'">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="title" content="Dixo 5 - Dictionnaire Anglais-Français en ligne">
@@ -11,63 +12,6 @@
 	<meta name="keywords" content="dixo 5, dixo five, dictionnaire facile à utiliser, dictionnaire anglais français">
 	<title>Dixo 5 - Dictionnaire Anglais - Français</title>
 	<link rel="stylesheet" href="css/output.css" type="text/css">
-	<style>
-		html, body {
-			margin: 0;
-		}
-
-		#langToggler {
-			width: 32pt;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-		}
-		#langToggler img {
-			width: 250%;
-			height: 100%;
-			object-fit: cover;
-		}
-
-		.word-item {
-			padding: 8pt;
-		}
-		.word-item:hover {
-			background-color: var(--bs-dark);
-			color: var(--bs-light);
-		}
-
-		#sensesListContainer {
-			position: fixed;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			background-color: #0002;
-		}
-
-		#sensesList {
-			position: fixed;
-			top: 30%;
-			left: 5%;
-			right: 5%;
-			bottom: 5%;
-			background-color: var(--bs-dark);
-			color: var(--bs-light);
-			overflow-y: hidden;
-		}
-
-		#sensesList .item:hover, .hovered {
-			background-color: var(--bs-primary);
-			color: var(--bs-dark);
-		}
-
-		@media (max-width: 767px) {
-			.word-item {
-				padding: 4pt;
-			}
-		}
-
-	</style>
 </head>
 <body>
 	<header class="sticky-top">
