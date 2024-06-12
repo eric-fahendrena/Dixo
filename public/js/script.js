@@ -133,13 +133,13 @@ function handleWordOnClickEvents(item, dict) {
 
         $(header).addClass('d-flex align-items-center justify-content-between p-4 shadow mb-1');
         $(word).addClass('h3');
-        $(xBtn).addClass('btn btn-outline-light');
+        $(xBtn).addClass('btn-close btn-close-white');
 
         $(sensesCont).addClass('h-75 overflow-y-scroll');
         $(senses).addClass('list-unstyled');
 
         $(word).html(`${dict.word} ${dict.ipa1} ${dict.ipa2}`);
-        $(xBtn).html('<i class="bi-x"></i>');
+        // $(xBtn).html('<i class="bi-x"></i>');
 
         $(header).append(word);
         $(header).append(xBtn);

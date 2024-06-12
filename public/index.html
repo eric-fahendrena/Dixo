@@ -4,7 +4,13 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<meta http-equiv="Content-Security-Policy" content="default-src 'self'">
+	<meta http-equiv="Content-Security-Policy" content="
+		default-src 'self';
+		script-src 'self' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://www.googletagmanager.com;
+		style-src 'self' https://cdn.jsdelivr.net;
+		font-src 'self' https://cdn.jsdelivr.net;
+		img-src 'self' data:;
+		connect-src 'self' https://www.google-analytics.com/">
 	<meta name="Content-Security-Policy" value="default-src 'self'">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="title" content="Dixo 5 - Dictionnaire Anglais-Français en ligne">
@@ -83,12 +89,6 @@
 
 	<!-- Google tag (gtag.js) -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-VHSMLGTT12"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-
-	  gtag('config', 'G-VHSMLGTT12');
-	</script>
+	<script src="js/gtag.js"></script>
 </body>
 </html>
