@@ -37,7 +37,7 @@ function getData(res) {
 					return;
 				}
 
-				// there is any error, so let's read the file
+				// there is no error, so let's read the file
 
 				let fileContentLines;
 

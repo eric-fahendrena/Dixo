@@ -202,6 +202,20 @@ function escapeHTML(unsafe) {
  * when document is ready
  */
 $(document).ready(function(){
+    const loader = document.createElement('div');
+    $(loader).css({
+        height: '80pt',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        color: '#888',
+        fontSize: '12pt',
+        fontWeight: 'bold',
+        textTransform: 'uppercase',
+    });
+    $(loader).text("Chargement...");
+    $('#wordsList').append(loader);
+
     fetch('/api/data')
     .then(response => response.json())
     .then(data => {
